@@ -3,9 +3,9 @@ package com.packagename.myapp;
 import java.util.HashMap;
 import java.util.Vector;
 
-public class BackEnd {
+public class LoginService {
 
-    private static BackEnd instance = null;
+    private static LoginService instance = null;
     private Vector<String> logged = new Vector<>();
     private static HashMap<String, String> users = new HashMap<>();
 
@@ -13,7 +13,7 @@ public class BackEnd {
         users.put("user", "111111");
     }
 
-    private BackEnd() {
+    private LoginService() {
     }
 
     public boolean isExist(String login, String pass){
@@ -36,9 +36,9 @@ public class BackEnd {
         logged.remove(s);
     }
 
-    public static BackEnd getInstance(){
+    public static LoginService getInstance(){
         if (instance == null){
-            instance = new BackEnd();
+            instance = new LoginService();
         }
         return instance;
     }

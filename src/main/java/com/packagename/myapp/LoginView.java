@@ -14,7 +14,7 @@ import com.vaadin.flow.router.Route;
 @Route("")
 public class LoginView extends Div  {
 
-    private BackEnd back = BackEnd.getInstance();
+    private LoginService back = LoginService.getInstance();
     private VerticalLayout loginLayout = new VerticalLayout();
 
     public LoginView() {
