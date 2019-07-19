@@ -30,7 +30,6 @@ public class LoginView extends Div  {
         loginLayout.add(enter);
         loginLayout.setAlignItems(FlexComponent.Alignment.CENTER);
 
-        //UI ui = getUI().get();
         enter.addClickListener(new ComponentEventListener<ClickEvent<Button>>() {
             @Override
             public void onComponentEvent(ClickEvent<Button> buttonClickEvent) {
@@ -39,7 +38,6 @@ public class LoginView extends Div  {
                     showNotify("Выполнен вход");
                     back.addLoggedUser(login.getValue());
                     loginLayout.setVisible(false);
-                    //ui.getSession().close();
                     enter.getUI().ifPresent(ui -> ui.navigate(MainPageView.class));
                 }else {
                     showNotify("Неправильный логин или пароль, попробуйте еще раз");

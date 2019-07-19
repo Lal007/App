@@ -17,11 +17,7 @@ public class LoginService {
     }
 
     public boolean isExist(String login, String pass){
-        if (users.containsKey(login) && users.containsValue(pass)){
-            return true;
-        }else {
-            return false;
-        }
+        return users.get(login).equals(pass);
     }
 
     public boolean isLogged(String user){
